@@ -1,3 +1,3 @@
 # Personal Website
 
-This is a React version of my personal portfolio. Available at brandonmichaelbrown.com.
+This is a React version of my personal portfolio. Available at [brandonmichaelbrown.com](https://brandonmichaelbrown.com).

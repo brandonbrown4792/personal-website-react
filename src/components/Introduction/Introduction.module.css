@@ -1,0 +1,46 @@
+.introductionTitle {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.introductionTitle > h1 {
+  font-size: 56pt;
+  margin-bottom: 20px;
+}
+
+.introductionTitle > h2 {
+  font-size: 22pt;
+  margin-bottom: 20px;
+}
+
+.introIconsContainer {
+  margin-top: 60px;
+  max-width: 600px;
+  padding: 0px 20px;
+}
+
+.introIconsContainer .three {
+  margin-bottom: 15px;
+}
+
+.introIconsContainer a {
+  text-decoration: none;
+  color: white;
+}
+
+.introIconsContainer a:hover {
+  color: white;
+}
+
+.introIconsContainer img {
+  margin: 0;
+  color: white;
+}
+
+.introIconsContainer p {
+  text-align: center;
+  margin: 0;
+}

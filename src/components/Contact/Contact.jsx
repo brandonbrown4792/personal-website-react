@@ -8,14 +8,12 @@ export default function Contact() {
     message: ''
   });
 
-  const [status, setStatus] = useState(null); // 'success' | 'error' | null
+  const [status, setStatus] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+    console.log(`Entering change for ${e.target.name}`)
+    setFormData({ ...formData, [e.target.name]: e.target.value })
   };
 
   const handleSubmit = async (e) => {

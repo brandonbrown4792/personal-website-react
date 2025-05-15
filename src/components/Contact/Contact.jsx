@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useContactFormSubmit } from './useFormSubmit'
 import Navbar from '../Navbar';
 
 export default function Contact() {
@@ -10,6 +11,7 @@ export default function Contact() {
 
   const [status, setStatus] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const { submitContactForm } = useContactFormSubmit();
 
   const handleChange = (e) => {
     console.log(`Entering change for ${e.target.name}`)
@@ -19,26 +21,7 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch('https://formspree.io/xyynokak', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json'
-        },
-        body: new FormData(e.target)
-      });
-
-      if (response.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
-        setSubmitted(true);
-      } else {
-        setStatus('error');
-      }
-    } catch (err) {
-      console.error(err);
-      setStatus('error');
-    }
+    submitContactForm(e, setStatus, setFormData, setSubmitted)
   };
 
   return (
